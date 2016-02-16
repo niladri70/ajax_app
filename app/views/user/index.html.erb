@@ -1,0 +1,27 @@
+<table border= "1" style="width:50%">
+<thead>
+<tr>
+<th>Name</th>
+<th>Country</th>
+<th>state</th>
+<th>Address</th>
+<th> actions </th>
+</tr>
+</thead>
+<tbody>
+<% @reg.each do |p| %>
+<tr>
+<td><%= reg.name %></td>
+<td><%= reg.country %></td>
+<td><%= reg.state %></td>
+<td><%= reg.address%></td>
+<td><%= link_to 'Show', user_path(p)%> |
+<%= link_to 'Edit', edit_user_path(p) %>|
+<%= link_to 'Destroy', user_path(p), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%=link_to 'New Product', new_user_path %><br>
+
+
